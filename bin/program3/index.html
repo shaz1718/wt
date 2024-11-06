@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Product Feedback Form</h1>
+    <p class="intro">We value your feedback! Please take a moment to let us know how we’re doing.</p>
+
+    <form action="#" method="POST">
+        <!-- Rating -->
+        <div class="form-group">
+            <label for="rating">Overall Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="" disabled selected>Select a rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Very Poor</option>
+            </select>
+        </div>
+
+        <!-- Feedback Type -->
+        <div class="form-group">
+            <label>Type of Feedback:</label>
+            <div class="checkbox-group">
+                <label class="checkbox-label"><input type="checkbox" name="feedbackType[]" value="suggestion"> Suggestion</label>
+                <label class="checkbox-label"><input type="checkbox" name="feedbackType[]" value="complaint"> Complaint</label>
+                <label class="checkbox-label"><input type="checkbox" name="feedbackType[]" value="praise"> Praise</label>
+            </div>
+        </div>
+
+        <!-- Comments -->
+        <div class="form-group">
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Please share your feedback here..." required></textarea>
+        </div>
+
+        <!-- Contact Information -->
+        <h2>Optional Contact Information</h2>
+        <p>If you would like us to follow up, please provide your contact details.</p>
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email">
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+</body>
+</html>
